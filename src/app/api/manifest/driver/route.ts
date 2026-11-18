@@ -1,0 +1,62 @@
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  return NextResponse.json({
+    id: '/driver',
+    name: 'SOLO Driver | Zero Commission',
+    short_name: 'SOLO Driver',
+    description: 'Zero-Commission Driver Portal: keep 100% of your trip fares with R499/pm flat SaaS.',
+    start_url: '/driver?source=pwa',
+    scope: '/',
+    display: 'standalone',
+    display_override: ['standalone', 'minimal-ui'],
+    orientation: 'portrait',
+    background_color: '#09090b',
+    theme_color: '#16a34a',
+    categories: ['transportation', 'business'],
+    prefer_related_applications: false,
+    icons: [
+      {
+        src: '/driver-icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'any'
+      },
+      {
+        src: '/driver-icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'maskable'
+      },
+      {
+        src: '/driver-icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'any'
+      },
+      {
+        src: '/driver-icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'maskable'
+      }
+    ],
+    shortcuts: [
+      {
+        name: "Go Online",
+        url: "/driver?source=pwa",
+        icons: [{ src: "/driver-icon-192.png", sizes: "192x192" }]
+      },
+      {
+        name: "Driver KYC Documents",
+        url: "/driver?source=pwa",
+        icons: [{ src: "/driver-icon-192.png", sizes: "192x192" }]
+      }
+    ]
+  }, {
+    headers: {
+      'Content-Type': 'application/manifest+json',
+      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800'
+    }
+  });
+}
