@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { Car, Map, ShieldCheck, Download, UserPlus, Building2, ArrowUpRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { Car, Map, ShieldCheck, Download, UserPlus, Building2, ArrowUpRight, Sparkles, CheckCircle2, Compass } from "lucide-react";
 import { usePWA } from "@/lib/PWAContext";
 
 export default function Home() {
